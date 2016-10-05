@@ -1,0 +1,18 @@
+*******************************************************************************************************
+WELCOME TO TIGERFIT: THE COMPLETE CHI-SQUARE MINIMIZATION FITTER FOR SUPERNOVA LIGHTCURVES
+USE TIGERFIT TO FIT A VARIETY OF POWER INPUT MODELS TO OBSERVED PSEUDOBOLOMETRIC LIGHT CURVE
+DATA OF SUPERNOVA EXPLOSIONS. CONSULT THE README FILE FOR INSTRUCTIONS.
+COPYRIGHT 2016: DR. MANOS CHATZOPOULOS (DEPARTMENT OF PHYSICS & ASTRONOMY, LOUISIANA STATE UNIVERSITY)
+*******************************************************************************************************
+List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Magnetar Spin-down Model
+----------------------------------------------------------------------------------------------
+Pmag =  1.77904785964  +/-  0.329685652304  milliseconds
+Bmag =  0.17102552503  +/-  0.0358537047536  x 10^14 Gauss
+M_ej =  13.8303515941  +/-  4.98253429592  M_sun for opacity kappa = 0.05 cm^2/g
+M_ej =  3.45758789853  +/-  1.24563357398  M_sun for opacity kappa = 0.20 cm^2/g
+M_ej =  2.09550781729  +/-  0.754929438776  M_sun for opacity kappa = 0.33 cm^2/g
+E_SN =  8.2567199017e+51  +/-  2.97457297467e+51 erg/s for opacity kappa = 0.05 cm^2/g
+E_SN =  2.06417997542e+51  +/-  7.43643243667e+50 erg/s for opacity kappa = 0.20 cm^2/g
+E_SN =  1.25101816692e+51  +/-  4.5069287495e+50 erg/s for opacity kappa = 0.33 cm^2/g
+The reduced chi-square value for the best-fit model is  1.43190344107
+*************************************************************************************************

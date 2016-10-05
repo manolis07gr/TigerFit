@@ -1,0 +1,59 @@
+*******************************************************************************************************
+WELCOME TO TIGERFIT: THE COMPLETE CHI-SQUARE MINIMIZATION FITTER FOR SUPERNOVA LIGHTCURVES
+USE TIGERFIT TO FIT A VARIETY OF POWER INPUT MODELS TO OBSERVED PSEUDOBOLOMETRIC LIGHT CURVE
+DATA OF SUPERNOVA EXPLOSIONS. CONSULT THE README FILE FOR INSTRUCTIONS.
+COPYRIGHT 2016: DR. MANOS CHATZOPOULOS (DEPARTMENT OF PHYSICS & ASTRONOMY, LOUISIANA STATE UNIVERSITY)
+*******************************************************************************************************
+List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Radioactive Decay Model
+--------------------------------------------------------------------------------------------
+M_Ni =  20.129743679  +/-  0.0270124070706  M_sun
+M_ej =  13.9893257809  +/-  1.25385697963  M_sun for opacity kappa = 0.05 cm^2/g
+M_ej =  3.49733144522  +/-  0.313464244907  M_sun for opacity kappa = 0.20 cm^2/g
+M_ej =  2.11959481529  +/-  0.189978330247  M_sun for opacity kappa = 0.33 cm^2/g
+E_SN =  8.35162749119e+51  +/-  7.48552616838e+50 erg/s for opacity kappa = 0.05 cm^2/g
+E_SN =  2.0879068728e+51  +/-  1.87138154209e+50 erg/s for opacity kappa = 0.20 cm^2/g
+E_SN =  1.26539810473e+51  +/-  1.13417063157e+50 erg/s for opacity kappa = 0.33 cm^2/g
+The reduced chi-square value for the best-fit model is  1.73379628273
+********************************************************************************************
+********************************************************************************************
+List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Magnetar Spin-down Model
+----------------------------------------------------------------------------------------------
+Pmag =  2.38157524738  +/-  0.00314375812449  milliseconds
+Bmag =  23.2005037129  +/-  44.197179263  x 10^14 Gauss
+M_ej =  24.5957217282  +/-  26.1557112717  M_sun for opacity kappa = 0.05 cm^2/g
+M_ej =  6.14893043204  +/-  6.53892781792  M_sun for opacity kappa = 0.20 cm^2/g
+M_ej =  3.72662450427  +/-  3.96298655632  M_sun for opacity kappa = 0.33 cm^2/g
+E_SN =  1.46836458717e+52  +/-  1.56149596292e+52 erg/s for opacity kappa = 0.05 cm^2/g
+E_SN =  3.67091146793e+51  +/-  3.9037399073e+51 erg/s for opacity kappa = 0.20 cm^2/g
+E_SN =  2.22479482905e+51  +/-  2.36590297412e+51 erg/s for opacity kappa = 0.33 cm^2/g
+The reduced chi-square value for the best-fit model is  3.74558437092
+*********************************************************************************************
+*********************************************************************************************
+List of Derived Parameters for the CSM Model for constant density CSM shell (s_CSM = 0)
+---------------------------------------------------------------------------------------
+E_SN =  2.2262426346  +/-  0.000183266730511  x 10^51 erg/s
+R_progenitor =  0.0133978888019  +/-  3.95494579614e-06  x 10^14 cm
+M_ej =  6.5878071095  +/-  0.0725049295045  M_sun
+Kappa_ej =  0.28  SN ejecta opacity in cm^2/g
+n_ej =  10  outer slope of SN ejecta density profile
+M_CSM =  14.1908816674  +/-  0.0734707818263  M_sun
+Mdot =  0.19367320439  +/-  0.000163351219004  M_sun/year
+The reduced chi-square value for the best-fit model is  2.13412170945
+***************************************************************************************
+***************************************************************************************
+List of Derived Parameters for the CSM Model for 1/r^2 (s_CSM = 2) wind-like CSM
+--------------------------------------------------------------------------------
+E_SN =  4.02003226375  +/-  0.499072620289  x 10^51 erg/s
+R_progenitor =  0.0109526410946  +/-  0.0715532666954  x 10^14 cm
+M_ej =  8.76086660415  +/-  43.760776537  M_sun
+Kappa_ej =  0.4  SN ejecta opacity in cm^2/g
+n_ej =  12  outer slope of SN ejecta density profile
+M_CSM =  5.51448515572  +/-  15.8049025597  M_sun
+Mdot =  0.999996895971  +/-  0.159592796252  M_sun/year
+The reduced chi-square value for the best-fit model is  6.14211296244
+********************************************************************************
+********************************************************************************
+----------------------------------------------------------------------------------------------------------------------
+The lowest reduced chi-square value is  1.73379628273  for the Radioactive decay  model.
+----------------------------------------------------------------------------------------------------------------------
+*************************************************************************************************

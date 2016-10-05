@@ -1,0 +1,19 @@
+*******************************************************************************************************
+WELCOME TO TIGERFIT: THE COMPLETE CHI-SQUARE MINIMIZATION FITTER FOR SUPERNOVA LIGHTCURVES
+USE TIGERFIT TO FIT A VARIETY OF POWER INPUT MODELS TO OBSERVED PSEUDOBOLOMETRIC LIGHT CURVE
+DATA OF SUPERNOVA EXPLOSIONS. CONSULT THE README FILE FOR INSTRUCTIONS.
+COPYRIGHT 2016: DR. MANOS CHATZOPOULOS (DEPARTMENT OF PHYSICS & ASTRONOMY, LOUISIANA STATE UNIVERSITY)
+*******************************************************************************************************
+List of Derived Parameters for the General Radioactive Decay Model
+------------------------------------------------------------------
+M_Ni =  0.17138243179  +/-  1.53221888815e-05  M_sun
+M_ej =  0.927918082837  +/-  0.236481390349  M_sun for opacity kappa = 0.05 cm^2/g
+M_ej =  0.231979520709  +/-  0.0591203475872  M_sun for opacity kappa = 0.20 cm^2/g
+M_ej =  0.140593648915  +/-  0.0358305136892  M_sun for opacity kappa = 0.33 cm^2/g
+E_SN =  5.53964284453e+50  +/-  1.4117867365e+50 erg/s for opacity kappa = 0.05 cm^2/g
+E_SN =  1.38491071113e+50  +/-  3.52946684125e+49 erg/s for opacity kappa = 0.20 cm^2/g
+E_SN =  8.39339824928e+49  +/-  2.13907081288e+49 erg/s for opacity kappa = 0.33 cm^2/g
+The gamma-ray trapping parameter A =  746.496  +/-  0.0 s^2
+The reduced chi-square value for the best-fit model is  7.66354972744
+*************************************************************************************************
+BOOM! HOPE YOU ENJOYED YOUR SUPERNOVA FITS! THANK YOU FOR USING TIGERFIT.

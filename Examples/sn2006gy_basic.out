@@ -1,0 +1,60 @@
+*******************************************************************************************************
+WELCOME TO TIGERFIT: THE COMPLETE CHI-SQUARE MINIMIZATION FITTER FOR SUPERNOVA LIGHTCURVES
+USE TIGERFIT TO FIT A VARIETY OF POWER INPUT MODELS TO OBSERVED PSEUDOBOLOMETRIC LIGHT CURVE
+DATA OF SUPERNOVA EXPLOSIONS. CONSULT THE README FILE FOR INSTRUCTIONS.
+COPYRIGHT 2016: DR. MANOS CHATZOPOULOS (DEPARTMENT OF PHYSICS & ASTRONOMY, LOUISIANA STATE UNIVERSITY)
+*******************************************************************************************************
+List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Radioactive Decay Model
+--------------------------------------------------------------------------------------------
+M_Ni =  5.99672775071  +/-  0.123694168346  M_sun
+M_ej =  10.9439771789  +/-  6.02104024618  M_sun for opacity kappa = 0.05 cm^2/g
+M_ej =  2.73599429472  +/-  1.50526006154  M_sun for opacity kappa = 0.20 cm^2/g
+M_ej =  1.65817836043  +/-  0.912278825178  M_sun for opacity kappa = 0.33 cm^2/g
+E_SN =  6.53355437578e+51  +/-  3.59456102697e+51 erg/s for opacity kappa = 0.05 cm^2/g
+E_SN =  1.63338859395e+51  +/-  8.98640256742e+50 erg/s for opacity kappa = 0.20 cm^2/g
+E_SN =  9.89932481179e+50  +/-  5.44630458631e+50 erg/s for opacity kappa = 0.33 cm^2/g
+The reduced chi-square value for the best-fit model is  122.355333715
+********************************************************************************************
+********************************************************************************************
+List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Magnetar Spin-down Model
+----------------------------------------------------------------------------------------------
+Pmag =  2.86231658635  +/-  0.0217923306181  milliseconds
+Bmag =  50.8612021777  +/-  8.53301010112  x 10^14 Gauss
+M_ej =  39.7365123231  +/-  15.2798577222  M_sun for opacity kappa = 0.05 cm^2/g
+M_ej =  9.93412808079  +/-  3.81996443055  M_sun for opacity kappa = 0.20 cm^2/g
+M_ej =  6.02068368533  +/-  2.31512995791  M_sun for opacity kappa = 0.33 cm^2/g
+E_SN =  2.37226978569e+52  +/-  9.12207506014e+51 erg/s for opacity kappa = 0.05 cm^2/g
+E_SN =  5.93067446423e+51  +/-  2.28051876504e+51 erg/s for opacity kappa = 0.20 cm^2/g
+E_SN =  3.59434816014e+51  +/-  1.38213258487e+51 erg/s for opacity kappa = 0.33 cm^2/g
+The reduced chi-square value for the best-fit model is  16.174606494
+*********************************************************************************************
+*********************************************************************************************
+List of Derived Parameters for the CSM Model for constant density CSM shell (s_CSM = 0)
+---------------------------------------------------------------------------------------
+E_SN =  1.47191309475  +/-  0.00152600844479  x 10^51 erg/s
+R_progenitor =  0.00764421838524  +/-  7.83197090098e-06  x 10^14 cm
+M_ej =  7.1883192449  +/-  0.0449803072558  M_sun
+Kappa_ej =  0.33  SN ejecta opacity in cm^2/g
+n_ej =  9  outer slope of SN ejecta density profile
+M_CSM =  6.93423436392  +/-  0.032932965216  M_sun
+Mdot =  0.0213505908072  +/-  1.68178796011e-05  M_sun/year
+The reduced chi-square value for the best-fit model is  18.0025872768
+***************************************************************************************
+***************************************************************************************
+List of Derived Parameters for the CSM Model for 1/r^2 (s_CSM = 2) wind-like CSM
+--------------------------------------------------------------------------------
+E_SN =  1.58301209888  +/-  155.209151957  x 10^51 erg/s
+R_progenitor =  0.0980991983097  +/-  2.02191548345  x 10^14 cm
+M_ej =  12.4863780198  +/-  662.866134158  M_sun
+Kappa_ej =  0.4  SN ejecta opacity in cm^2/g
+n_ej =  12  outer slope of SN ejecta density profile
+M_CSM =  3.62604167022  +/-  1227.11811683  M_sun
+Mdot =  0.996006879871  +/-  126.327491125  M_sun/year
+The reduced chi-square value for the best-fit model is  363.764322839
+********************************************************************************
+********************************************************************************
+----------------------------------------------------------------------------------------------------------------------
+The lowest reduced chi-square value is  16.174606494  for the Magnetar spin-down  model.
+----------------------------------------------------------------------------------------------------------------------
+*************************************************************************************************
+BOOM! HOPE YOU ENJOYED YOUR SUPERNOVA FITS! THANK YOU FOR USING TIGERFIT.
