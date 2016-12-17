@@ -93,7 +93,7 @@ def Lum_rad(x,Mni,td,r0,vej,A):
 def Lum_rad_r0(x,Mni,td):
     r0 = 0.
     vej = 10000.
-    A = 100000.
+    A = 100.
     res2 = Lum_rad(x,Mni,td,r0,vej,A)
     return res2
 
