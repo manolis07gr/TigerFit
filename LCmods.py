@@ -128,7 +128,7 @@ def Lum_mag(x,Ep,td,tp,r0,vej):
 
 def Lum_mag_r0(x,Ep,td,tp):
     r0 = 0.
-    vej = 10000.
+    vej = 20000.
     res2 = Lum_mag(x,Ep,td,tp,r0,vej)
     return res2
 
