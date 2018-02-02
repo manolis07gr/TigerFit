@@ -8,12 +8,12 @@ import matplotlib.pyplot as plt
 import warnings
 
 #Welcome message
-print '*******************************************************************************************************'
-print 'WELCOME TO TIGERFIT: THE COMPLETE CHI-SQUARE MINIMIZATION FITTER FOR SUPERNOVA LIGHTCURVES'
-print 'USE TIGERFIT TO FIT A VARIETY OF POWER INPUT MODELS TO OBSERVED PSEUDOBOLOMETRIC LIGHT CURVE'
-print 'DATA OF SUPERNOVA EXPLOSIONS. CONSULT THE README FILE FOR INSTRUCTIONS.'
-print 'COPYRIGHT 2016: DR. MANOS CHATZOPOULOS (DEPARTMENT OF PHYSICS & ASTRONOMY, LOUISIANA STATE UNIVERSITY)'
-print '*******************************************************************************************************'
+print ('*******************************************************************************************************')
+print ('WELCOME TO TIGERFIT: THE COMPLETE CHI-SQUARE MINIMIZATION FITTER FOR SUPERNOVA LIGHTCURVES')
+print ('USE TIGERFIT TO FIT A VARIETY OF POWER INPUT MODELS TO OBSERVED PSEUDOBOLOMETRIC LIGHT CURVE')
+print ('DATA OF SUPERNOVA EXPLOSIONS. CONSULT THE README FILE FOR INSTRUCTIONS.')
+print ('COPYRIGHT 2016: DR. MANOS CHATZOPOULOS (DEPARTMENT OF PHYSICS & ASTRONOMY, LOUISIANA STATE UNIVERSITY)')
+print ('*******************************************************************************************************')
 
 # Read bolometric LC data to be fit. 1st column is rest-frame days, 2nd: luminosity and 3rd: luminosity error,
 # and define if errors are used for fitting
@@ -75,22 +75,22 @@ if sys.argv[2] == 'rad':
     DE1 = E1*np.sqrt((DMej1/Mej1)**2+4.*(p[3]/pcov.diagonal()[3])**2)
     DE2 = E2*np.sqrt((DMej2/Mej2)**2+4.*(p[3]/pcov.diagonal()[3])**2)
     DE3 = E3*np.sqrt((DMej3/Mej3)**2+4.*(p[3]/pcov.diagonal()[3])**2)
-    print 'List of Derived Parameters for the General Radioactive Decay Model'
-    print '------------------------------------------------------------------'
-    print 'M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun'
-    print 'M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g'
-    print 'M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g'
-    print 'M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g'
-    print 'E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g'
-    print 'E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g'
-    print 'E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g'
-    print 'The gamma-ray trapping parameter A = ',p[4]*LCmods.day**2/LCmods.A0,' +/- ',\
-      pcov.diagonal()[4]*LCmods.day**2/LCmods.A0, 's^2'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the General Radioactive Decay Model')
+    print ('------------------------------------------------------------------')
+    print ('M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun')
+    print ('M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g')
+    print ('M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g')
+    print ('M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g')
+    print ('E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g')
+    print ('E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g')
+    print ('E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g')
+    print ('The gamma-ray trapping parameter A = ',p[4]*LCmods.day**2/LCmods.A0,' +/- ',\
+      pcov.diagonal()[4]*LCmods.day**2/LCmods.A0, 's^2')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_rad(float(i),p[0],p[1],p[2],p[3],p[4])
+            print (float(i),LCmods.Lum_rad(float(i),p[0],p[1],p[2],p[3],p[4]))
 
     if plot:
         mod = [0.,]
@@ -134,20 +134,20 @@ elif sys.argv[2] == 'rad0':
     DE1 = E1*np.sqrt((DMej1/Mej1)**2)
     DE2 = E2*np.sqrt((DMej2/Mej2)**2)
     DE3 = E3*np.sqrt((DMej3/Mej3)**2)
-    print 'List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Radioactive Decay Model'
-    print '--------------------------------------------------------------------------------------------'
-    print 'M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun'
-    print 'M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g'
-    print 'M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g'
-    print 'M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g'
-    print 'E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g'
-    print 'E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g'
-    print 'E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Radioactive Decay Model')
+    print ('--------------------------------------------------------------------------------------------')
+    print ('M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun')
+    print ('M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g')
+    print ('M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g')
+    print ('M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g')
+    print ('E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g')
+    print ('E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g')
+    print ('E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_rad_r0(float(i),p[0],p[1])
+            print (float(i),LCmods.Lum_rad_r0(float(i),p[0],p[1]))
 
     if plot:
         mod = [0.,]
@@ -174,15 +174,15 @@ elif sys.argv[2] == 'rad0':
     
 elif sys.argv[2] == 'mag':
     model = lummag_v
-    guess = (0.5,35.,20.,0.1,10000.)
-    bound = (((0.1,1.,2.,0.01,5000.),(10.0,100.,50.,0.1,20000.)))
+    guess = (1.0,20.,10.,0.001,20000.)
+    bound = (((0.1,1.,2.,0.0001,10000.),(10.0,100.,50.,0.01,30000.)))
     p, pcov = curve_fit(model, xdata, ydata, sigma = sig, p0=guess, bounds=bound)
     chi_red = (1./(len(xdata)-len(guess))) * sum((ydata-lummag_v(xdata,p[0],p[1],p[2],p[3],p[4]))**2/dydata**2)
     B14 = 10.**14 # Magnetic field-strength in 10^14 Gauss
     e0 = 2.e50
     Pmag = 10.* np.sqrt(e0/(p[0]*LCmods.E51))
     DPmag = 0.5 * Pmag * (pcov.diagonal()[0]/p[0])
-    Bmag = np.sqrt(130.*Pmag**2/(365.*p[1])) * B14
+    Bmag = np.sqrt(130.*Pmag**2/(365.*p[2])) * B14
     DBmag = Bmag * np.sqrt((DPmag/Pmag)**2+(0.5*pcov.diagonal()[2]/p[2])**2)
     Mej1 = ((3./10.)*(13.8*LCmods.c/0.05)*p[4]*LCmods.kms2cms*(p[1]*LCmods.day)**2)/LCmods.Msun
     Mej2 = ((3./10.)*(13.8*LCmods.c/0.2)*p[4]*LCmods.kms2cms*(p[1]*LCmods.day)**2)/LCmods.Msun
@@ -196,22 +196,22 @@ elif sys.argv[2] == 'mag':
     DE1 = E1*np.sqrt((DMej1/Mej1)**2+4.*(p[4]/pcov.diagonal()[4])**2)
     DE2 = E2*np.sqrt((DMej2/Mej2)**2+4.*(p[4]/pcov.diagonal()[4])**2)
     DE3 = E3*np.sqrt((DMej3/Mej3)**2+4.*(p[4]/pcov.diagonal()[4])**2)    
-    print 'List of Derived Parameters for the General Magnetar Spin-down Model'
-    print '-------------------------------------------------------------------'
-    print 'Pmag = ',Pmag,' +/- ',DPmag,' milliseconds'
-    print 'Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss'
-    print 'M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g'
-    print 'M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g'
-    print 'M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g'
-    print 'E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g'
-    print 'E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g'
-    print 'E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the General Magnetar Spin-down Model')
+    print ('-------------------------------------------------------------------')
+    print ('Pmag = ',Pmag,' +/- ',DPmag,' milliseconds')
+    print ('Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss')
+    print ('M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g')
+    print ('M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g')
+    print ('M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g')
+    print ('E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g')
+    print ('E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g')
+    print ('E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_mag(float(i),p[0],p[1],p[2],p[3],p[4])
+            print (float(i),LCmods.Lum_mag(float(i),p[0],p[1],p[2],p[3],p[4]))
 
     if plot:
         mod = [0.,]
@@ -238,7 +238,7 @@ elif sys.argv[2] == 'mag':
     
 elif sys.argv[2] == 'mag0':
     model = lummagr0_v
-    guess = (0.5,35.,20.)
+    guess = (1.0,20.,10.)
     bound = (((0.1,1.,2.),(10.0,100.,50.)))
     p, pcov = curve_fit(model, xdata, ydata, sigma = sig, p0=guess, bounds=bound)
     chi_red = (1./(len(xdata)-len(guess))) * sum((ydata-lummagr0_v(xdata,p[0],p[1],p[2]))**2/dydata**2)
@@ -260,21 +260,21 @@ elif sys.argv[2] == 'mag0':
     DE1 = E1*np.sqrt((DMej1/Mej1)**2)
     DE2 = E2*np.sqrt((DMej2/Mej2)**2)
     DE3 = E3*np.sqrt((DMej3/Mej3)**2)    
-    print 'List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Magnetar Spin-down Model'
-    print '----------------------------------------------------------------------------------------------'
-    print 'Pmag = ',Pmag,' +/- ',DPmag,' milliseconds'
-    print 'Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss'
-    print 'M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g'
-    print 'M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g'
-    print 'M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g'
-    print 'E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g'
-    print 'E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g'
-    print 'E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red   
+    print ('List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Magnetar Spin-down Model')
+    print ('----------------------------------------------------------------------------------------------')
+    print ('Pmag = ',Pmag,' +/- ',DPmag,' milliseconds')
+    print ('Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss')
+    print ('M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g')
+    print ('M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g')
+    print ('M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g')
+    print ('E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g')
+    print ('E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g')
+    print ('E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_mag_r0(float(i),p[0],p[1],p[2])
+            print (float(i),LCmods.Lum_mag_r0(float(i),p[0],p[1],p[2]))
 
     if plot:
         mod = [0.,]
@@ -312,24 +312,24 @@ elif sys.argv[2] == 'csm':
     DPmag = 0.5 * Pmag * (pcov.diagonal()[1]/p[1])
     Bmag = np.sqrt(130.*Pmag**2/(365.*p[1])) * B14
     DBmag = Bmag * np.sqrt((DPmag/Pmag)**2+(0.5*pcov.diagonal()[2]/p[2])**2)    
-    print 'List of Derived Parameters for the General Hybrid CSM+RD+MAG Model'
-    print '------------------------------------------------------------------'
-    print 'M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun'
-    print 'Pmag = ',Pmag,' +/- ',DPmag,' milliseconds'
-    print 'Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss'
-    print 'E_SN = ',p[3],' +/- ',pcov.diagonal()[3],' x 10^51 erg'
-    print 'R_progenitor = ',p[4]/10.,' +/- ',pcov.diagonal()[4]/10.,' x 10^14 cm'
-    print 'M_ej = ',p[5],' +/- ',pcov.diagonal()[5],' M_sun'
-    print 'Kappa_ej = ',round(p[6],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p[7],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p[9],' +/- ',pcov.diagonal()[9],' M_sun'
-    print 'Mdot = ',p[10],' +/- ',pcov.diagonal()[10],' M_sun/year'
-    print 's_CSM = ',int(round(p[11],0)), 'slope of CSM density profile'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the General Hybrid CSM+RD+MAG Model')
+    print ('------------------------------------------------------------------')
+    print ('M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun')
+    print ('Pmag = ',Pmag,' +/- ',DPmag,' milliseconds')
+    print ('Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss')
+    print ('E_SN = ',p[3],' +/- ',pcov.diagonal()[3],' x 10^51 erg')
+    print ('R_progenitor = ',p[4]/10.,' +/- ',pcov.diagonal()[4]/10.,' x 10^14 cm')
+    print ('M_ej = ',p[5],' +/- ',pcov.diagonal()[5],' M_sun')
+    print ('Kappa_ej = ',round(p[6],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p[7],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p[9],' +/- ',pcov.diagonal()[9],' M_sun')
+    print ('Mdot = ',p[10],' +/- ',pcov.diagonal()[10],' M_sun/year')
+    print ('s_CSM = ',int(round(p[11],0)), 'slope of CSM density profile')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csm(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8],p[9],p[10],p[11],p[12])
+            print (float(i),LCmods.Lum_csm(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8],p[9],p[10],p[11],p[12]))
 
     if plot:
         mod = [0.,]
@@ -361,21 +361,21 @@ elif sys.argv[2] == 'csmrads2':
     p, pcov = curve_fit(model, xdata, ydata, sigma = sig, p0=guess, bounds=bound)
     chi_red = (1./(len(xdata)-len(guess))) * sum((ydata-lumcsmrads2(xdata,p[0],p[1],p[2],p[3],p[4],p[5],p[6],\
                                                                  p[7],p[8]))**2/dydata**2)
-    print 'List of Derived Parameters for the Hybrid CSM+RD Model for 1/r^2 (s_CSM = 2) wind-like CSM'
-    print '------------------------------------------------------------------------------------------'
-    print 'M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun'
-    print 'E_SN = ',p[1],' +/- ',pcov.diagonal()[1],' x 10^51 erg'
-    print 'R_progenitor = ',p[2]/10.,' +/- ',pcov.diagonal()[2]/10.,' x 10^14 cm'
-    print 'M_ej = ',p[3],' +/- ',pcov.diagonal()[3],' M_sun'
-    print 'Kappa_ej = ',round(p[4],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p[5],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p[6],' +/- ',pcov.diagonal()[6],' M_sun'
-    print 'Mdot = ',p[7],' +/- ',pcov.diagonal()[7],' M_sun/year'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the Hybrid CSM+RD Model for 1/r^2 (s_CSM = 2) wind-like CSM')
+    print ('------------------------------------------------------------------------------------------')
+    print ('M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun')
+    print ('E_SN = ',p[1],' +/- ',pcov.diagonal()[1],' x 10^51 erg')
+    print ('R_progenitor = ',p[2]/10.,' +/- ',pcov.diagonal()[2]/10.,' x 10^14 cm')
+    print ('M_ej = ',p[3],' +/- ',pcov.diagonal()[3],' M_sun')
+    print ('Kappa_ej = ',round(p[4],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p[5],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p[6],' +/- ',pcov.diagonal()[6],' M_sun')
+    print ('Mdot = ',p[7],' +/- ',pcov.diagonal()[7],' M_sun/year')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csmrad_s2(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8])
+            print (float(i),LCmods.Lum_csmrad_s2(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8]))
 
     if plot:
         mod = [0.,]
@@ -413,22 +413,22 @@ elif sys.argv[2] == 'csmmags2':
     DPmag = 0.5 * Pmag * (pcov.diagonal()[0]/p[0])
     Bmag = np.sqrt(130.*Pmag**2/(365.*p[1])) * B14
     DBmag = Bmag * np.sqrt((DPmag/Pmag)**2+(0.5*pcov.diagonal()[1]/p[1])**2)    
-    print 'List of Derived Parameters for the Hybrid CSM+MAG Model for 1/r^2 (s_CSM = 2) wind-like CSM'
-    print '-------------------------------------------------------------------------------------------'
-    print 'Pmag = ',Pmag,' +/- ',DPmag,' milliseconds'
-    print 'Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss'
-    print 'E_SN = ',p[2],' +/- ',pcov.diagonal()[2],' x 10^51 erg'
-    print 'R_progenitor = ',p[3]/10.,' +/- ',pcov.diagonal()[3]/10.,' x 10^14 cm'
-    print 'M_ej = ',p[4],' +/- ',pcov.diagonal()[4],' M_sun'
-    print 'Kappa_ej = ',round(p[5],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p[6],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p[7],' +/- ',pcov.diagonal()[7],' M_sun'
-    print 'Mdot = ',p[8],' +/- ',pcov.diagonal()[8],' M_sun/year'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the Hybrid CSM+MAG Model for 1/r^2 (s_CSM = 2) wind-like CSM')
+    print ('-------------------------------------------------------------------------------------------')
+    print ('Pmag = ',Pmag,' +/- ',DPmag,' milliseconds')
+    print ('Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss')
+    print ('E_SN = ',p[2],' +/- ',pcov.diagonal()[2],' x 10^51 erg')
+    print ('R_progenitor = ',p[3]/10.,' +/- ',pcov.diagonal()[3]/10.,' x 10^14 cm')
+    print ('M_ej = ',p[4],' +/- ',pcov.diagonal()[4],' M_sun')
+    print ('Kappa_ej = ',round(p[5],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p[6],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p[7],' +/- ',pcov.diagonal()[7],' M_sun')
+    print ('Mdot = ',p[8],' +/- ',pcov.diagonal()[8],' M_sun/year')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csmmag_s2(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8],p[9])
+            print (float(i),LCmods.Lum_csmmag_s2(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8],p[9]))
 
     if plot:
         mod = [0.,]
@@ -460,20 +460,20 @@ elif sys.argv[2] == 'csm2':
     p, pcov = curve_fit(model, xdata, ydata, sigma = sig, p0=guess, bounds=bound)
     chi_red = (1./(len(xdata)-len(guess))) * sum((ydata-lumcsmonlys2(xdata,p[0],p[1],p[2],p[3],p[4]\
                                                                       ,p[5],p[6],p[7]))**2/dydata**2)
-    print 'List of Derived Parameters for the CSM Model for 1/r^2 (s_CSM = 2) wind-like CSM'
-    print '--------------------------------------------------------------------------------'
-    print 'E_SN = ',p[0],' +/- ',pcov.diagonal()[0],' x 10^51 erg'
-    print 'R_progenitor = ',p[1]/10.,' +/- ',pcov.diagonal()[1]/10.,' x 10^14 cm'
-    print 'M_ej = ',p[2],' +/- ',pcov.diagonal()[2],' M_sun'
-    print 'Kappa_ej = ',round(p[3],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p[4],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p[5],' +/- ',pcov.diagonal()[5],' M_sun'
-    print 'Mdot = ',p[6],' +/- ',pcov.diagonal()[6],' M_sun/year'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the CSM Model for 1/r^2 (s_CSM = 2) wind-like CSM')
+    print ('--------------------------------------------------------------------------------')
+    print ('E_SN = ',p[0],' +/- ',pcov.diagonal()[0],' x 10^51 erg')
+    print ('R_progenitor = ',p[1]/10.,' +/- ',pcov.diagonal()[1]/10.,' x 10^14 cm')
+    print ('M_ej = ',p[2],' +/- ',pcov.diagonal()[2],' M_sun')
+    print ('Kappa_ej = ',round(p[3],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p[4],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p[5],' +/- ',pcov.diagonal()[5],' M_sun')
+    print ('Mdot = ',p[6],' +/- ',pcov.diagonal()[6],' M_sun/year')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csmonly_s2(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7])
+            print (float(i),LCmods.Lum_csmonly_s2(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7]))
 
     if plot:
         mod = [0.,]
@@ -505,21 +505,21 @@ elif sys.argv[2] == 'csmrads0':
     p, pcov = curve_fit(model, xdata, ydata, sigma = sig, p0=guess, bounds=bound)
     chi_red = (1./(len(xdata)-len(guess))) * sum((ydata-lumcsmrads0(xdata,p[0],p[1],p[2],p[3],p[4],p[5],\
                                                                       p[6],p[7],p[8]))**2/dydata**2)
-    print 'List of Derived Parameters for the Hybrid CSM+RD Model for constant density CSM shell (s_CSM = 0)'
-    print '-------------------------------------------------------------------------------------------------'
-    print 'M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun'
-    print 'E_SN = ',p[1],' +/- ',pcov.diagonal()[1],' x 10^51 erg'
-    print 'R_progenitor = ',p[2]/10.,' +/- ',pcov.diagonal()[2]/10.,' x 10^14 cm'
-    print 'M_ej = ',p[3],' +/- ',pcov.diagonal()[3],' M_sun'
-    print 'Kappa_ej = ',round(p[4],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p[5],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p[6],' +/- ',pcov.diagonal()[6],' M_sun'
-    print 'Mdot = ',p[7],' +/- ',pcov.diagonal()[7],' M_sun/year'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the Hybrid CSM+RD Model for constant density CSM shell (s_CSM = 0)')
+    print ('-------------------------------------------------------------------------------------------------')
+    print ('M_Ni = ',p[0],' +/- ',pcov.diagonal()[0],' M_sun')
+    print ('E_SN = ',p[1],' +/- ',pcov.diagonal()[1],' x 10^51 erg')
+    print ('R_progenitor = ',p[2]/10.,' +/- ',pcov.diagonal()[2]/10.,' x 10^14 cm')
+    print ('M_ej = ',p[3],' +/- ',pcov.diagonal()[3],' M_sun')
+    print ('Kappa_ej = ',round(p[4],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p[5],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p[6],' +/- ',pcov.diagonal()[6],' M_sun')
+    print ('Mdot = ',p[7],' +/- ',pcov.diagonal()[7],' M_sun/year')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csmrad_s0(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8])
+            print (float(i),LCmods.Lum_csmrad_s0(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8]))
 
     if plot:
         mod = [0.,]
@@ -557,22 +557,22 @@ elif sys.argv[2] == 'csmmags0':
     DPmag = 0.5 * Pmag * (pcov.diagonal()[0]/p[0])
     Bmag = np.sqrt(130.*Pmag**2/(365.*p[1])) * B14
     DBmag = Bmag * np.sqrt((DPmag/Pmag)**2+(0.5*pcov.diagonal()[1]/p[1])**2)    
-    print 'List of Derived Parameters for the Hybrid CSM+MAG Model for constant density CSM shell (s_CSM = 0)'
-    print '--------------------------------------------------------------------------------------------------'
-    print 'Pmag = ',Pmag,' +/- ',DPmag,' milliseconds'
-    print 'Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss'
-    print 'E_SN = ',p[2],' +/- ',pcov.diagonal()[2],' x 10^51 erg'
-    print 'R_progenitor = ',p[3]/10.,' +/- ',pcov.diagonal()[3]/10.,' x 10^14 cm'
-    print 'M_ej = ',p[4],' +/- ',pcov.diagonal()[4],' M_sun'
-    print 'Kappa_ej = ',round(p[5],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p[6],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p[7],' +/- ',pcov.diagonal()[7],' M_sun'
-    print 'Mdot = ',p[8],' +/- ',pcov.diagonal()[8],' M_sun/year'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the Hybrid CSM+MAG Model for constant density CSM shell (s_CSM = 0)')
+    print ('--------------------------------------------------------------------------------------------------')
+    print ('Pmag = ',Pmag,' +/- ',DPmag,' milliseconds')
+    print ('Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss')
+    print ('E_SN = ',p[2],' +/- ',pcov.diagonal()[2],' x 10^51 erg')
+    print ('R_progenitor = ',p[3]/10.,' +/- ',pcov.diagonal()[3]/10.,' x 10^14 cm')
+    print ('M_ej = ',p[4],' +/- ',pcov.diagonal()[4],' M_sun')
+    print ('Kappa_ej = ',round(p[5],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p[6],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p[7],' +/- ',pcov.diagonal()[7],' M_sun')
+    print ('Mdot = ',p[8],' +/- ',pcov.diagonal()[8],' M_sun/year')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csmmag_s0(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8],p[9])
+            print (float(i),LCmods.Lum_csmmag_s0(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8],p[9]))
 
     if plot:
         mod = [0.,]
@@ -604,20 +604,20 @@ elif sys.argv[2] == 'csm0':
     p, pcov = curve_fit(model, xdata, ydata, sigma = sig, p0=guess, bounds=bound)
     chi_red = (1./(len(xdata)-len(guess))) * sum((ydata-lumcsmonlys0(xdata,p[0],p[1],p[2],p[3],\
                                                                      p[4],p[5],p[6],p[7]))**2/dydata**2)
-    print 'List of Derived Parameters for the CSM Model for constant density CSM shell (s_CSM = 0)'
-    print '---------------------------------------------------------------------------------------'
-    print 'E_SN = ',p[0],' +/- ',pcov.diagonal()[0],' x 10^51 erg'
-    print 'R_progenitor = ',p[1]/10.,' +/- ',pcov.diagonal()[1]/10.,' x 10^14 cm'
-    print 'M_ej = ',p[2],' +/- ',pcov.diagonal()[2],' M_sun'
-    print 'Kappa_ej = ',round(p[3],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p[4],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p[5],' +/- ',pcov.diagonal()[5],' M_sun'
-    print 'Mdot = ',p[6],' +/- ',pcov.diagonal()[6],' M_sun/year'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the CSM Model for constant density CSM shell (s_CSM = 0)')
+    print ('---------------------------------------------------------------------------------------')
+    print ('E_SN = ',p[0],' +/- ',pcov.diagonal()[0],' x 10^51 erg')
+    print ('R_progenitor = ',p[1]/10.,' +/- ',pcov.diagonal()[1]/10.,' x 10^14 cm')
+    print ('M_ej = ',p[2],' +/- ',pcov.diagonal()[2],' M_sun')
+    print ('Kappa_ej = ',round(p[3],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p[4],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p[5],' +/- ',pcov.diagonal()[5],' M_sun')
+    print ('Mdot = ',p[6],' +/- ',pcov.diagonal()[6],' M_sun/year')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csmonly_s0(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7])
+            print (float(i),LCmods.Lum_csmonly_s0(float(i),p[0],p[1],p[2],p[3],p[4],p[5],p[6],p[7]))
 
     if plot:
         mod = [0.,]
@@ -654,19 +654,19 @@ elif sys.argv[2] == 'fbaccr':
     DMej1 = (Mej1*np.sqrt(4.*((pcov.diagonal()[4]/p[4])**2)+(p[2]/pcov.diagonal()[2])**2))
     DMej2 = (Mej2*np.sqrt(4.*((pcov.diagonal()[4]/p[4])**2)+(p[2]/pcov.diagonal()[2])**2))
     DMej3 = (Mej3*np.sqrt(4.*((pcov.diagonal()[4]/p[4])**2)+(p[2]/pcov.diagonal()[2])**2))
-    print 'List of Derived Parameters for the Fall-back Accretion Model (Dexter & Kasen 2013)'
-    print '----------------------------------------------------------------------------------'
-    print 'L0 = ',p[0],' +/- ',pcov.diagonal()[0],' x 10^45 erg'
-    print 'R0 = ',p[1],' +/- ',pcov.diagonal()[1],' x 10^15 cm'
-    print 'Accreting mass M_accr = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g'
-    print 'Accreting mass M_accr = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g'
-    print 'Accreting mass M_accr = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g'
-    print 'Power-law slope of mass accretion ',p[3], ' :(1.666 corresponds to the standard for t^-5/3 dependence).'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red
+    print ('List of Derived Parameters for the Fall-back Accretion Model (Dexter & Kasen 2013)')
+    print ('----------------------------------------------------------------------------------')
+    print ('L0 = ',p[0],' +/- ',pcov.diagonal()[0],' x 10^45 erg')
+    print ('R0 = ',p[1],' +/- ',pcov.diagonal()[1],' x 10^15 cm')
+    print ('Accreting mass M_accr = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g')
+    print ('Accreting mass M_accr = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g')
+    print ('Accreting mass M_accr = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g')
+    print ('Power-law slope of mass accretion ',p[3], ' :(1.666 corresponds to the standard for t^-5/3 dependence).')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red)
 
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_fb(float(i),p[0],p[1],p[2],p[3],p[4])
+            print (float(i),LCmods.Lum_fb(float(i),p[0],p[1],p[2],p[3],p[4]))
 
     if plot:
         mod = [0.,]
@@ -709,23 +709,23 @@ elif sys.argv[2] == 'basic':
     DE1 = E1*np.sqrt((DMej1/Mej1)**2)
     DE2 = E2*np.sqrt((DMej2/Mej2)**2)
     DE3 = E3*np.sqrt((DMej3/Mej3)**2)
-    print 'List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Radioactive Decay Model'
-    print '--------------------------------------------------------------------------------------------'
-    print 'M_Ni = ',p_r[0],' +/- ',pcov_r.diagonal()[0],' M_sun'
-    print 'M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g'
-    print 'M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g'
-    print 'M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g'
-    print 'E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g'
-    print 'E_SN = ',E2,' +/- ',DE2, 'erg/s for opacity kappa = 0.20 cm^2/g'
-    print 'E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red_r
-    print '********************************************************************************************'
-    print '********************************************************************************************'
+    print ('List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Radioactive Decay Model')
+    print ('--------------------------------------------------------------------------------------------')
+    print ('M_Ni = ',p_r[0],' +/- ',pcov_r.diagonal()[0],' M_sun')
+    print ('M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g')
+    print ('M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g')
+    print ('M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g')
+    print ('E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g')
+    print ('E_SN = ',E2,' +/- ',DE2, 'erg/s for opacity kappa = 0.20 cm^2/g')
+    print ('E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red_r)
+    print ('********************************************************************************************')
+    print ('********************************************************************************************')
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_rad_r0(float(i),p_r[0],p_r[1])
-        print '********************************************************************************************'
-        print '********************************************************************************************'
+            print (float(i),LCmods.Lum_rad_r0(float(i),p_r[0],p_r[1]))
+        print ('********************************************************************************************')
+        print ('********************************************************************************************')
 
     model2 = lummagr0_v
     guess_m  = (0.5,35.,20.)
@@ -750,24 +750,24 @@ elif sys.argv[2] == 'basic':
     DE1 = E1*np.sqrt((DMej1/Mej1)**2)
     DE2 = E2*np.sqrt((DMej2/Mej2)**2)
     DE3 = E3*np.sqrt((DMej3/Mej3)**2)    
-    print 'List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Magnetar Spin-down Model'
-    print '----------------------------------------------------------------------------------------------'
-    print 'Pmag = ',Pmag,' +/- ',DPmag,' milliseconds'
-    print 'Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss'
-    print 'M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g'
-    print 'M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g'
-    print 'M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g'
-    print 'E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g'
-    print 'E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g'
-    print 'E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red_m
-    print '*********************************************************************************************'
-    print '*********************************************************************************************'
+    print ('List of Derived Parameters for the Basic (R0 = 0, vej = 10,000 km/s) Magnetar Spin-down Model')
+    print ('----------------------------------------------------------------------------------------------')
+    print ('Pmag = ',Pmag,' +/- ',DPmag,' milliseconds')
+    print ('Bmag = ',Bmag/B14,' +/- ',DBmag/B14,' x 10^14 Gauss')
+    print ('M_ej = ',Mej1,' +/- ',DMej1,' M_sun for opacity kappa = 0.05 cm^2/g')
+    print ('M_ej = ',Mej2,' +/- ',DMej2,' M_sun for opacity kappa = 0.20 cm^2/g')
+    print ('M_ej = ',Mej3,' +/- ',DMej3,' M_sun for opacity kappa = 0.33 cm^2/g')
+    print ('E_SN = ',E1,' +/- ',DE1, 'erg for opacity kappa = 0.05 cm^2/g')
+    print ('E_SN = ',E2,' +/- ',DE2, 'erg for opacity kappa = 0.20 cm^2/g')
+    print ('E_SN = ',E3,' +/- ',DE3, 'erg for opacity kappa = 0.33 cm^2/g')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red_m)
+    print ('*********************************************************************************************')
+    print ('*********************************************************************************************')
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_mag_r0(float(i),p_m[0],p_m[1],p_m[2])
-        print '*********************************************************************************************'
-        print '*********************************************************************************************'
+            print (float(i),LCmods.Lum_mag_r0(float(i),p_m[0],p_m[1],p_m[2]))
+        print ('*********************************************************************************************')
+        print ('*********************************************************************************************')
 
     model3 = lumcsmonlys0
     guess_c0  = (1.0,0.01,8.,0.33,12,5.,0.1,1000.)
@@ -775,23 +775,23 @@ elif sys.argv[2] == 'basic':
     p_c0, pcov_c0 = curve_fit(model3, xdata, ydata, sigma = dydata, p0=guess_c0, bounds=bound_c0)
     chi_red_c0 = (1./(len(xdata)-len(guess_c0))) * sum((ydata-lumcsmonlys0(xdata,p_c0[0],p_c0[1],p_c0[2]\
                                             ,p_c0[3],p_c0[4],p_c0[5],p_c0[6],p_c0[7]))**2/dydata**2)
-    print 'List of Derived Parameters for the CSM Model for constant density CSM shell (s_CSM = 0)'
-    print '---------------------------------------------------------------------------------------'
-    print 'E_SN = ',p_c0[0],' +/- ',pcov_c0.diagonal()[0],' x 10^51 erg'
-    print 'R_progenitor = ',p_c0[1]/10.,' +/- ',pcov_c0.diagonal()[1]/10.,' x 10^14 cm'
-    print 'M_ej = ',p_c0[2],' +/- ',pcov_c0.diagonal()[2],' M_sun'
-    print 'Kappa_ej = ',round(p_c0[3],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p_c0[4],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p_c0[5],' +/- ',pcov_c0.diagonal()[5],' M_sun'
-    print 'Mdot = ',p_c0[6],' +/- ',pcov_c0.diagonal()[6],' M_sun/year'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red_c0
-    print '***************************************************************************************'
-    print '***************************************************************************************'
+    print ('List of Derived Parameters for the CSM Model for constant density CSM shell (s_CSM = 0)')
+    print ('---------------------------------------------------------------------------------------')
+    print ('E_SN = ',p_c0[0],' +/- ',pcov_c0.diagonal()[0],' x 10^51 erg')
+    print ('R_progenitor = ',p_c0[1]/10.,' +/- ',pcov_c0.diagonal()[1]/10.,' x 10^14 cm')
+    print ('M_ej = ',p_c0[2],' +/- ',pcov_c0.diagonal()[2],' M_sun')
+    print ('Kappa_ej = ',round(p_c0[3],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p_c0[4],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p_c0[5],' +/- ',pcov_c0.diagonal()[5],' M_sun')
+    print ('Mdot = ',p_c0[6],' +/- ',pcov_c0.diagonal()[6],' M_sun/year')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red_c0)
+    print ('***************************************************************************************')
+    print ('***************************************************************************************')
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csmonly_s0(float(i),p_c0[0],p_c0[1],p_c0[2],p_c0[3],p_c0[4],p_c0[5],p_c0[6],p_c0[7])
-        print '***************************************************************************************'
-        print '***************************************************************************************'
+            print (float(i),LCmods.Lum_csmonly_s0(float(i),p_c0[0],p_c0[1],p_c0[2],p_c0[3],p_c0[4],p_c0[5],p_c0[6],p_c0[7]))
+        print ('***************************************************************************************')
+        print ('***************************************************************************************')
 
     model4 = lumcsmonlys2
     guess_c2  = (1.0,0.01,10.,0.33,12,5.0,0.2,1000.)
@@ -799,29 +799,29 @@ elif sys.argv[2] == 'basic':
     p_c2, pcov_c2 = curve_fit(model4, xdata, ydata, sigma = dydata, p0=guess_c2, bounds=bound_c2)
     chi_red_c2 = (1./(len(xdata)-len(guess_c2))) * sum((ydata-lumcsmonlys2(xdata,p_c2[0],p_c2[1],\
                                 p_c2[2],p_c2[3],p_c2[4],p_c2[5],p_c2[6],p_c2[7]))**2/dydata**2)
-    print 'List of Derived Parameters for the CSM Model for 1/r^2 (s_CSM = 2) wind-like CSM'
-    print '--------------------------------------------------------------------------------'
-    print 'E_SN = ',p_c2[0],' +/- ',pcov_c2.diagonal()[0],' x 10^51 erg'
-    print 'R_progenitor = ',p_c2[1]/10.,' +/- ',pcov_c2.diagonal()[1]/10.,' x 10^14 cm'
-    print 'M_ej = ',p_c2[2],' +/- ',pcov_c2.diagonal()[2],' M_sun'
-    print 'Kappa_ej = ',round(p_c2[3],2),' SN ejecta opacity in cm^2/g'
-    print 'n_ej = ',int(round(p_c2[4],0)),' outer slope of SN ejecta density profile'
-    print 'M_CSM = ',p_c2[5],' +/- ',pcov_c2.diagonal()[5],' M_sun'
-    print 'Mdot = ',p_c2[6],' +/- ',pcov_c2.diagonal()[6],' M_sun/year'
-    print 'The reduced chi-square value for the best-fit model is ',chi_red_c2
-    print '********************************************************************************'
-    print '********************************************************************************'
+    print ('List of Derived Parameters for the CSM Model for 1/r^2 (s_CSM = 2) wind-like CSM')
+    print ('--------------------------------------------------------------------------------')
+    print ('E_SN = ',p_c2[0],' +/- ',pcov_c2.diagonal()[0],' x 10^51 erg')
+    print ('R_progenitor = ',p_c2[1]/10.,' +/- ',pcov_c2.diagonal()[1]/10.,' x 10^14 cm')
+    print ('M_ej = ',p_c2[2],' +/- ',pcov_c2.diagonal()[2],' M_sun')
+    print ('Kappa_ej = ',round(p_c2[3],2),' SN ejecta opacity in cm^2/g')
+    print ('n_ej = ',int(round(p_c2[4],0)),' outer slope of SN ejecta density profile')
+    print ('M_CSM = ',p_c2[5],' +/- ',pcov_c2.diagonal()[5],' M_sun')
+    print ('Mdot = ',p_c2[6],' +/- ',pcov_c2.diagonal()[6],' M_sun/year')
+    print ('The reduced chi-square value for the best-fit model is ',chi_red_c2)
+    print ('********************************************************************************')
+    print ('********************************************************************************')
     if show_mod:
         for i in range(1,300):
-            print float(i),LCmods.Lum_csmonly_s2(float(i),p_c2[0],p_c2[1],p_c2[2],p_c2[3],p_c2[4],p_c2[5],p_c2[6],p_c2[7])
-        print '********************************************************************************'
-        print '********************************************************************************'
+            print (float(i),LCmods.Lum_csmonly_s2(float(i),p_c2[0],p_c2[1],p_c2[2],p_c2[3],p_c2[4],p_c2[5],p_c2[6],p_c2[7]))
+        print ('********************************************************************************')
+        print ('********************************************************************************')
 
     chi_ar = np.array([chi_red_r,chi_red_m,chi_red_c0,chi_red_c2])
     mod_ar = np.array(['Radioactive decay', 'Magnetar spin-down', 'CSM interaction, s=0', 'CSM interaction, s=2'])
-    print '----------------------------------------------------------------------------------------------------------------------'
-    print 'The lowest reduced chi-square value is ',min(chi_ar),' for the',mod_ar[np.where(chi_ar == min(chi_ar))[0][0]],' model.'
-    print '----------------------------------------------------------------------------------------------------------------------'
+    print ('----------------------------------------------------------------------------------------------------------------------')
+    print ('The lowest reduced chi-square value is ',min(chi_ar),' for the',mod_ar[np.where(chi_ar == min(chi_ar))[0][0]],' model.')
+    print ('----------------------------------------------------------------------------------------------------------------------')
     
     if plot:
         mod1 = [0.,]
@@ -862,13 +862,13 @@ elif sys.argv[2] == 'basic':
         plt.show()    
         
 else:
-    print 'This is not a valid model entry. For a list of available models please read intro comments above.'
+    print ('This is not a valid model entry. For a list of available models please read intro comments above.')
 
 warnings.filterwarnings("ignore")
 
 #Goodbye message
-print '*************************************************************************************************'
-print 'BOOM! HOPE YOU ENJOYED YOUR SUPERNOVA FITS! THANK YOU FOR USING TIGERFIT.'
+print ('*************************************************************************************************')
+print ('BOOM! HOPE YOU ENJOYED YOUR SUPERNOVA FITS! THANK YOU FOR USING TIGERFIT.')
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #END OF TIGERFIT - USE SPACE BELOW TO ADD NEW MODELS AND PRINT ANY MODEL TO STANDARD OUTPUT
